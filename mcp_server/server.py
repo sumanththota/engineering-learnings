@@ -7,16 +7,32 @@ via the official `mcp` SDK, with zero tools registered. search_learnings
 `@mcp.tool()` -- this module holds no ranking or writing logic of its own,
 mirroring reindex.py's separation of pure build logic from its CLI shell.
 """
+import json
 import os
 import sys
 from pathlib import Path
 
 from mcp.server.mcpserver import MCPServer
 
+from mcp_server.search import search_learnings as _search_learnings
+
 # The server's only required configuration: where the vault lives.
 REPO_PATH_ENV = "LEARNINGS_REPO_PATH"
 
 mcp = MCPServer("engineering-learnings")
+
+
+@mcp.tool(name="search_learnings")
+def search_learnings_tool(query: str = None, tags: list[str] = None, project: str = None) -> list[dict]:
+    """Search this vault's Learnings by query text, tags, and/or project.
+
+    Ranked results: corroboration boosts, superseded entries rank lower but
+    still appear. Thin adapter over the pure search_learnings() -- reads
+    INDEX.json here so the ranking function itself stays filesystem-free.
+    """
+    index_path = get_repo_path() / "INDEX.json"
+    entries = json.loads(index_path.read_text())
+    return _search_learnings(entries, query=query, tags=tags, project=project)
 
 
 def get_repo_path() -> Path:
