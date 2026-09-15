@@ -2,7 +2,7 @@
 
 ### Issue tracker
 
-Local markdown under `.scratch/<feature>/` (no GitHub remote yet). See `docs/agents/issue-tracker.md`.
+GitHub Issues on `sumanththota/engineering-learnings`, via the `gh` CLI. See `docs/agents/issue-tracker.md`.
 
 ### Domain docs
 
