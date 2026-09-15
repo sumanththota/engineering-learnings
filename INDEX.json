@@ -1,0 +1,319 @@
+[
+  {
+    "id": "check-data-provenance-before-assuming-bug",
+    "file": "learnings/check-data-provenance-before-assuming-bug.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "debugging",
+      "provenance"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "check-environment-before-blaming-code"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "check-environment-before-blaming-code",
+    "file": "learnings/check-environment-before-blaming-code.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "check-data-provenance-before-assuming-bug"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "contract-before-parallelism",
+    "file": "learnings/contract-before-parallelism.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "freeze-interface-contract-before-parallel-porting"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "decouple-commit-from-publish",
+    "file": "learnings/decouple-commit-from-publish.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "push-to-origin-only-at-review-gates"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "freeze-interface-contract-before-parallel-porting",
+    "file": "learnings/freeze-interface-contract-before-parallel-porting.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "parallelism",
+      "interfaces",
+      "agents"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "contract-before-parallelism"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "gate-business-logic-tickets-on-human-signoff",
+    "file": "learnings/gate-business-logic-tickets-on-human-signoff.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "review",
+      "process",
+      "agents"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "gate-semantic-changes-on-human-review"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "gate-semantic-changes-on-human-review",
+    "file": "learnings/gate-semantic-changes-on-human-review.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "gate-business-logic-tickets-on-human-signoff"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "git-worktrees-for-parallel-agent-execution",
+    "file": "learnings/git-worktrees-for-parallel-agent-execution.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "parallelism",
+      "git",
+      "agents"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "isolate-parallel-work-units-physically"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "golden-fixture-provenance-llamaparse-pypdf",
+    "file": "learnings/golden-fixture-provenance-llamaparse-pypdf.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "testing",
+      "fixtures",
+      "provenance"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "record-fixture-provenance"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "independently-reverify-agent-self-reports",
+    "file": "learnings/independently-reverify-agent-self-reports.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "agents",
+      "verification",
+      "process"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "never-trust-self-report-reverify"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "isolate-parallel-work-units-physically",
+    "file": "learnings/isolate-parallel-work-units-physically.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "git-worktrees-for-parallel-agent-execution"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "never-trust-self-report-reverify",
+    "file": "learnings/never-trust-self-report-reverify.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "independently-reverify-agent-self-reports"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "orchestrator-never-writes-ticket-code",
+    "file": "learnings/orchestrator-never-writes-ticket-code.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "agents",
+      "orchestration",
+      "process"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "thin-orchestrator-delegates-execution"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "pin-dependency-versions-for-ground-truth",
+    "file": "learnings/pin-dependency-versions-for-ground-truth.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "pin-extraction-library-versions"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "pin-extraction-library-versions",
+    "file": "learnings/pin-extraction-library-versions.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "dependencies",
+      "reproducibility",
+      "testing"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "pin-dependency-versions-for-ground-truth"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "push-to-origin-only-at-review-gates",
+    "file": "learnings/push-to-origin-only-at-review-gates.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "git",
+      "process"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "decouple-commit-from-publish"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "record-fixture-provenance",
+    "file": "learnings/record-fixture-provenance.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "golden-fixture-provenance-llamaparse-pypdf"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "thin-orchestrator-delegates-execution",
+    "file": "learnings/thin-orchestrator-delegates-execution.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "orchestrator-never-writes-ticket-code"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "track-blockers-as-backlog-items",
+    "file": "learnings/track-blockers-as-backlog-items.md",
+    "date": "2026-09-14",
+    "project": "pdf-ingestion-migration",
+    "tags": [
+      "process",
+      "planning"
+    ],
+    "type": "specific",
+    "confidence": "confirmed x1",
+    "links": [
+      "track-blockers-as-resolvable-backlog-items"
+    ],
+    "embedding": null
+  },
+  {
+    "id": "track-blockers-as-resolvable-backlog-items",
+    "file": "learnings/track-blockers-as-resolvable-backlog-items.md",
+    "date": "2026-09-14",
+    "project": "n/a",
+    "tags": [
+      "principle"
+    ],
+    "type": "principle",
+    "confidence": "confirmed x1",
+    "links": [
+      "track-blockers-as-backlog-items"
+    ],
+    "embedding": null
+  }
+]

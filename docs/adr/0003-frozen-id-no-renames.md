@@ -1,0 +1,3 @@
+# `id` is the filename stem, frozen at creation — no renames
+
+We considered giving each Learning a stable identity independent of its filename (a UUID), so cosmetic renames wouldn't break `links:` references. We rejected that: at this scale (a personal, solo-maintained corpus of dozens to low hundreds of files) a UUID trades away `grep`-ability and meaningful git history for robustness we don't need. Instead, `id` stays equal to the filename stem, but once created it is permanent — a file is never renamed. If a Learning needs a better name or content, a new file is written instead of editing the old one in place. The link-integrity check (reindex fails on a dangling `links:` id) is what makes "never rename" enforceable rather than just a convention.

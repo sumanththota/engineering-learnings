@@ -1,0 +1,3 @@
+# Drop `confidence`; corroboration is derived, not authored
+
+The original `confidence: confirmed xN` frontmatter field conflated two different things: epistemic certainty (is this principle true?) and corroboration count (how many Specifics link here?), and only happened to look correct because every principle currently has exactly one link. Once principles are shared (many Specifics → one Principle), a hand-typed count would silently drift out of sync with the actual link graph. We dropped the field entirely; corroboration for a Principle is instead the count of Specific learnings whose `links` reference it, computed from the graph rather than stored.

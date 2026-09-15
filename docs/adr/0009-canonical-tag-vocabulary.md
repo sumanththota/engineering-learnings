@@ -1,0 +1,3 @@
+# Tags are a closed vocabulary, grown lazily with a warning
+
+Free-text `tags` risk silent drift — a future Learning using `concurrency` where an existing one used `parallelism` would split one search facet into two without anyone noticing. We're closing the vocabulary: canonical tags are listed in `CONTEXT.md`, and `reindex.py` warns (does not fail) when a file uses a tag outside that list, so a new tag is a conscious choice — "this is genuinely new" vs. "I meant an existing one" — rather than an accident. Warn instead of fail because vocabulary growth is expected and shouldn't block a commit.
