@@ -15,6 +15,7 @@ from pathlib import Path
 from mcp.server.mcpserver import MCPServer
 
 from mcp_server.search import search_learnings as _search_learnings
+from mcp_server.writer import add_learning as _add_learning
 
 # The server's only required configuration: where the vault lives.
 REPO_PATH_ENV = "LEARNINGS_REPO_PATH"
@@ -33,6 +34,13 @@ def search_learnings_tool(query: str = None, tags: list[str] = None, project: st
     index_path = get_repo_path() / "INDEX.json"
     entries = json.loads(index_path.read_text())
     return _search_learnings(entries, query=query, tags=tags, project=project)
+
+
+@mcp.tool()
+def add_learning(id: str, date: str, project: str, tags: list[str], type: str, links: list[str], body: str) -> str:
+    """Write a new learnings/<id>.md file to the configured vault repo. See mcp_server/writer.py for the pure logic."""
+    path = _add_learning(get_repo_path() / "learnings", id, date, project, tags, type, links, body)
+    return str(path)
 
 
 def get_repo_path() -> Path:
