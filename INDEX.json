@@ -9,10 +9,11 @@
       "provenance"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "check-environment-before-blaming-code"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -24,10 +25,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "check-data-provenance-before-assuming-bug"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -39,10 +41,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "freeze-interface-contract-before-parallel-porting"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -54,10 +57,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "push-to-origin-only-at-review-gates"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -71,10 +75,11 @@
       "agents"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "contract-before-parallelism"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -88,10 +93,11 @@
       "agents"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "gate-semantic-changes-on-human-review"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -103,10 +109,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "gate-business-logic-tickets-on-human-signoff"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -120,10 +127,11 @@
       "agents"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "isolate-parallel-work-units-physically"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -137,10 +145,11 @@
       "provenance"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "record-fixture-provenance"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -154,10 +163,11 @@
       "process"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "never-trust-self-report-reverify"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -169,10 +179,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "git-worktrees-for-parallel-agent-execution"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -184,10 +195,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "independently-reverify-agent-self-reports"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -201,10 +213,11 @@
       "process"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "thin-orchestrator-delegates-execution"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -216,10 +229,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "pin-extraction-library-versions"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -233,10 +247,11 @@
       "testing"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "pin-dependency-versions-for-ground-truth"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -249,10 +264,11 @@
       "process"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "decouple-commit-from-publish"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -264,10 +280,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "golden-fixture-provenance-llamaparse-pypdf"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -279,10 +296,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "orchestrator-never-writes-ticket-code"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -295,10 +313,11 @@
       "planning"
     ],
     "type": "specific",
-    "confidence": "confirmed x1",
     "links": [
       "track-blockers-as-resolvable-backlog-items"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   },
   {
@@ -310,10 +329,11 @@
       "principle"
     ],
     "type": "principle",
-    "confidence": "confirmed x1",
     "links": [
       "track-blockers-as-backlog-items"
     ],
+    "corroboration": 1,
+    "superseded_by": null,
     "embedding": null
   }
 ]
