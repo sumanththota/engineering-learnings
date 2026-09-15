@@ -13,10 +13,19 @@ from pathlib import Path
 
 from mcp.server.mcpserver import MCPServer
 
+from mcp_server.writer import add_learning as _add_learning
+
 # The server's only required configuration: where the vault lives.
 REPO_PATH_ENV = "LEARNINGS_REPO_PATH"
 
 mcp = MCPServer("engineering-learnings")
+
+
+@mcp.tool()
+def add_learning(id: str, date: str, project: str, tags: list[str], type: str, links: list[str], body: str) -> str:
+    """Write a new learnings/<id>.md file to the configured vault repo. See mcp_server/writer.py for the pure logic."""
+    path = _add_learning(get_repo_path() / "learnings", id, date, project, tags, type, links, body)
+    return str(path)
 
 
 def get_repo_path() -> Path:
