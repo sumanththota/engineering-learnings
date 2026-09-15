@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "engineering-learnings": {
+      "type": "stdio",
+      "command": "/Users/sumanththota/Dev/engineering-learnings/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mcp_server.server"
+      ],
+      "env": {
+        "LEARNINGS_REPO_PATH": "/Users/sumanththota/Dev/engineering-learnings"
+      }
+    }
+  }
+}
