@@ -41,7 +41,7 @@ Rewrite `scripts/reindex.py` so it validates the corpus while it builds the inde
 
 ## Out of Scope
 
-- The MCP server and its `search_learnings` / `add_learning` tools (ADR 0008) — separate, future work.
+- The MCP server and its `search_learnings` / `add_learning` tools (ADR 0008) — separate, future work; see spec 0002.
 - Automated redaction or secret scanning (ADR 0006 explicitly deferred this).
 - Any change to the content of the 20 existing `learnings/*.md` files.
 - CI enforcement (e.g. a GitHub Actions check) — this spec covers the local pre-commit hook only.
@@ -49,4 +49,4 @@ Rewrite `scripts/reindex.py` so it validates the corpus while it builds the inde
 
 ## Further Notes
 
-This is "stage 2" of the pipeline already diagrammed for Sumanth (author → **commit-time build** → repo → retrieval today → future MCP server → agent harness). Stages 1, 3, and 4 already work; stages 5–6 are intentionally untouched by this spec.
+This is "stage 2" of the pipeline already diagrammed for Sumanth (author → **commit-time build** → repo → retrieval today → future MCP server → agent harness). Stages 1, 3, and 4 already work; stages 5–6 are intentionally untouched by this spec. Stage 5 (the MCP server) is now spec'd separately in spec 0002.
