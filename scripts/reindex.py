@@ -15,9 +15,10 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n", re.DOTALL)
 # Canonical tag vocabulary (CONTEXT.md, ADR 0009). A tag outside this list
 # warns rather than fails, so vocabulary growth is deliberate, not silent.
 CANONICAL_TAGS = {
-    "agents", "debugging", "dependencies", "fixtures", "git", "interfaces",
-    "orchestration", "parallelism", "planning", "principle", "process",
-    "provenance", "reproducibility", "review", "testing", "verification",
+    "agents", "debugging", "dependencies", "efficiency", "fixtures", "git",
+    "interfaces", "orchestration", "parallelism", "planning", "principle",
+    "process", "provenance", "reproducibility", "review", "testing",
+    "verification",
 }
 
 REQUIRED_FIELDS = ["id", "date", "project", "tags", "type", "links"]

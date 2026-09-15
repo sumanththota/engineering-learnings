@@ -18,7 +18,7 @@ _Avoid_: rule, best practice
 
 **Tag**:
 A keyword drawn from a closed, canonical vocabulary — not free text. A new tag is a deliberate addition to the list below, not an incidental word choice; `reindex.py` warns on any tag outside it.
-_Canonical list_: agents, debugging, dependencies, fixtures, git, interfaces, orchestration, parallelism, planning, principle, process, provenance, reproducibility, review, testing, verification
+_Canonical list_: agents, debugging, dependencies, efficiency, fixtures, git, interfaces, orchestration, parallelism, planning, principle, process, provenance, reproducibility, review, testing, verification
 
 **Superseded**:
 A Learning that has been replaced by a newer file with better phrasing or corrected content. Stays in the repo, permanently, with `superseded_by` pointing at its replacement. Other files' `links:` pointing at a Superseded id are not updated — `superseded_by` is the forward breadcrumb. Ranks lower in retrieval, but is never hidden or deleted.
