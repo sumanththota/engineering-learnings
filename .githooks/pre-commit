@@ -1,0 +1,10 @@
+#!/bin/sh
+# Rebuilds INDEX.json before every commit and stages the result.
+# Aborts the commit (nothing staged) if the build fails, e.g. a dangling
+# `links` id in a new or edited Learning. See docs/specs/0001-reindex-build-pipeline.md.
+set -e
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+python3 "$REPO_ROOT/scripts/reindex.py"
+git add "$REPO_ROOT/INDEX.json"
