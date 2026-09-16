@@ -61,6 +61,18 @@ def parse_frontmatter(text: str) -> dict:
     return fields
 
 
+def read_body(text: str) -> str:
+    """Strip the frontmatter block, returning the file's body content.
+
+    Raises ValueError on no frontmatter match, mirroring parse_frontmatter --
+    silently returning the raw text (what a no-match re.sub does) would leak
+    the frontmatter block into the body instead of failing loudly.
+    """
+    if not FRONTMATTER_RE.match(text):
+        raise ValueError("missing frontmatter block")
+    return FRONTMATTER_RE.sub("", text, count=1).strip()
+
+
 def parse_learnings(learnings_dir: Path):
     """Parse every learnings/*.md file's frontmatter.
 

@@ -128,6 +128,26 @@ class BuildIndexTests(unittest.TestCase):
 
             self.assertEqual(entries[0]["corroboration"], 0)
 
+    def test_read_body_strips_frontmatter(self):
+        text = "---\nid: specific-a\ntags: []\nlinks: []\n---\n\nActual body text.\n"
+
+        self.assertEqual(reindex.read_body(text), "Actual body text.")
+
+    def test_read_body_raises_on_missing_frontmatter(self):
+        with self.assertRaises(ValueError):
+            reindex.read_body("No frontmatter here, just body text.\n")
+
+    def test_read_body_preserves_internal_markdown_structure(self):
+        text = (
+            "---\nid: specific-a\ntags: []\nlinks: []\n---\n\n"
+            "## Heading\n\nFirst paragraph.\n\nSecond paragraph.\n"
+        )
+
+        self.assertEqual(
+            reindex.read_body(text),
+            "## Heading\n\nFirst paragraph.\n\nSecond paragraph.",
+        )
+
     def test_missing_field_warning_preserved_on_dangling_link_failure(self):
         with TemporaryDirectory() as tmp:
             learnings_dir = Path(tmp)

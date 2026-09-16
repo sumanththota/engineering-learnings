@@ -14,6 +14,7 @@ from pathlib import Path
 
 from mcp.server.mcpserver import MCPServer
 
+from mcp_server.body import attach_bodies
 from mcp_server.search import search_learnings as _search_learnings
 from mcp_server.writer import add_learning as _add_learning
 
@@ -28,12 +29,14 @@ def search_learnings_tool(query: str = None, tags: list[str] = None, project: st
     """Search this vault's Learnings by query text, tags, and/or project.
 
     Ranked results: corroboration boosts, superseded entries rank lower but
-    still appear. Thin adapter over the pure search_learnings() -- reads
-    INDEX.json here so the ranking function itself stays filesystem-free.
+    still appear. Each result includes its full `body` content (the actual
+    Why/How-to-apply text) -- treat a result as fully known from this call
+    alone, no separate Read of `file` needed.
     """
-    index_path = get_repo_path() / "INDEX.json"
-    entries = json.loads(index_path.read_text())
-    return _search_learnings(entries, query=query, tags=tags, project=project)
+    repo_path = get_repo_path()
+    entries = json.loads((repo_path / "INDEX.json").read_text())
+    results = _search_learnings(entries, query=query, tags=tags, project=project)
+    return attach_bodies(results, repo_path)
 
 
 @mcp.tool()
